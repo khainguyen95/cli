@@ -118,6 +118,7 @@ type containerOptions struct {
 	runtime            string
 	autoRemove         bool
 	init               bool
+	path               string
 
 	Image string
 	Args  []string
@@ -282,6 +283,7 @@ func addFlags(flags *pflag.FlagSet) *containerOptions {
 	flags.StringVar(&copts.runtime, "runtime", "", "Runtime to use for this container")
 
 	flags.BoolVar(&copts.init, "init", false, "Run an init inside the container that forwards signals and reaps processes")
+	flags.StringVar(&copts.path, "path", "", "Add custom folder diff of container")
 	flags.SetAnnotation("init", "version", []string{"1.25"})
 	return copts
 }
