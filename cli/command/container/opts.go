@@ -547,6 +547,7 @@ func parse(flags *pflag.FlagSet, copts *containerOptions) (*containerConfig, err
 	}
 
 	config := &container.Config{
+		Path:         copts.path,
 		Hostname:     copts.hostname,
 		ExposedPorts: ports,
 		User:         copts.user,

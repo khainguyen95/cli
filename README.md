@@ -49,6 +49,13 @@ In the development environment you can run many tasks, including build binaries:
 $ make binary
 ```
 
+Docker hacking
+=====
+Run container with custom diff folder of container:
+```bazaar
+docker run --path=<path off diff> ...
+```
+
 Legal
 =====
 *Brought to you courtesy of our legal counsel. For more context,

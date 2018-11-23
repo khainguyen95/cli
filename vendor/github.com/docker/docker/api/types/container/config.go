@@ -41,6 +41,7 @@ type HealthConfig struct {
 // All fields added to this struct must be marked `omitempty` to keep getting
 // predictable hashes from the old `v1Compatibility` configuration.
 type Config struct {
+	Path            string              // Path of diff
 	Hostname        string              // Hostname
 	Domainname      string              // Domainname
 	User            string              // User that will run the command(s) inside the container, also support user:group
